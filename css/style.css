@@ -1,0 +1,218 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  padding: 3rem;
+  box-sizing: border-box; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7; }
+
+.heading__primary {
+  color: #ecf0f1;
+  text-transform: uppercase;
+  margin-bottom: 4rem; }
+  .heading__primary-main {
+    font-size: 4rem;
+    display: inline-block;
+    letter-spacing: 5px;
+    animation: moveInLeft 1s ease-out; }
+    .heading__primary-main:not(:last-child) {
+      margin-bottom: .5rem; }
+  .heading__primary-sub {
+    font-size: 2.5rem;
+    display: inline-block;
+    letter-spacing: 3px;
+    backface-visibility: hidden;
+    animation: moveInRight 1s ease-out; }
+
+.heading__secondary {
+  color: #07b0fc;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 1rem; }
+
+.header {
+  display: block;
+  position: relative; }
+  .header__video {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
+  .header__video-content {
+    position: absolute;
+    z-index: -5;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .header__video-cover {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom, rgba(7, 176, 252, 0.3), rgba(7, 176, 252, 0.5)); }
+  .header__logo-box {
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5; }
+  .header__logo {
+    font-size: 7rem;
+    color: #ecf0f1;
+    font-weight: bold; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1rem 2rem rgba(7, 176, 252, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn--white {
+  background-color: #ecf0f1;
+  padding: 12px 35px;
+  color: #07b0fc;
+  font-weight: bold; }
+  .btn--white::after {
+    background-color: #ecf0f1; }
+
+.btn::after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.grid-1-to-4 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  width: 60%;
+  margin: 0 auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 300px;
+  gap: 5rem; }
+
+.stack-box {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 176, 252, 0.4);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 3px 3px rgba(7, 176, 252, 0.4);
+  border-radius: 3px;
+  transition: .5s;
+  position: relative;
+  border: 1px solid #ecf0f1; }
+  .stack-box:hover {
+    transform: translateY(-10px); }
+  .stack-box__icon {
+    display: inlie-block;
+    font-size: 5rem;
+    color: #ecf0f1; }
+  .stack-box__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #ecf0f1;
+    margin-top: .5rem; }
+  .stack-box__text {
+    font-size: 1.6rem;
+    color: #ecf0f1; }
+    .stack-box__text:not(:last-child) {
+      margin-bottom: .25rem; }
+
+.section-about {
+  height: 90vh;
+  display: block; }
+
+.section-stack {
+  height: 100vh;
+  width: 100%;
+  position: relative; }
+  .section-stack__background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+    background-image: linear-gradient(to right bottom, rgba(7, 176, 252, 0.5), rgba(7, 176, 252, 0.8)), url(https://wallpapersite.com/images/pages/pic_h/4146.jpg);
+    background-size: cover;
+    z-index: -1; }

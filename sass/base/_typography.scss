@@ -1,0 +1,40 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+}
+
+.heading__primary {
+  color: $color-secondary;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+
+  &-main {
+    font-size: 4rem;
+    display: inline-block;
+    letter-spacing: 5px;
+    animation: moveInLeft 1s ease-out;
+
+    &:not(:last-child) {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &-sub {
+    font-size: 2.5rem;
+    display: inline-block;
+    letter-spacing: 3px;
+    backface-visibility: hidden;
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+.heading__secondary {
+  color: $color-primary;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 1rem;
+}
