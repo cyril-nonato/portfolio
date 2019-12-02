@@ -1,0 +1,113 @@
+.card {
+  position: relative;
+
+  &:hover &__front {
+    animation: twirl .5s ease-in forwards;
+
+  }
+
+  &:hover &__back {
+    animation: twirl .5s .5s ease-out forwards reverse;
+  }
+
+  &__front {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 7px $color-quinary;
+    border-radius: 5px;
+  }
+
+  &__back {
+    transform: rotateY(90deg);
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 7px $color-quinary;
+    border-radius: 5px;
+  }
+  &__picture {
+    height: 250px;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+
+    &-1 {
+      background-position: center;
+      background-size: cover;
+      background-image: linear-gradient(
+        to right bottom, rgba($color-tertiary, .4), rgba($color-tertiary, .7)),
+        url(../../assets/readit.jpg);
+    }
+
+    &-2 {
+      background-position: center;
+      background-size: cover;
+      background-image: linear-gradient(
+        to right bottom, rgba($color-primary, .4), rgba($color-primary, .7)),
+        url(../../assets/season.jpg);
+    }
+
+    &-3 {
+      background-position: center;
+      background-size: cover;
+      background-image: linear-gradient(
+        to right bottom, rgba($color-quarternary, .4), rgba($color-quarternary, .7)),
+        url(../../assets/pokemon.jpg);
+    }
+  }
+
+  &__heading {
+    display: inline-block;
+    position: absolute;
+    top: 170px;
+    right: 15px;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    background: $color-secondary;
+
+    &-span {
+      padding: .5rem 1rem;
+      display: inline-block;
+      letter-spacing: 3px;
+      border-radius: 3px;
+      color: $color-secondary;
+
+      &--1 {
+        background-image: linear-gradient(to right bottom, rgba($color-tertiary, .5), rgba($color-tertiary, .8));
+      }
+
+      &--2 {
+        background-image: linear-gradient(to right bottom, rgba($color-primary, .5), rgba($color-primary, .8));
+      }
+
+      &--3 {
+        background-image: linear-gradient(to right bottom, rgba($color-quarternary, .5), rgba($color-quarternary, .8));
+      }
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+    width: 80%;
+    margin: auto;
+  }
+
+  &__item {
+    text-align: center;
+    padding: 1.2rem 0;
+    color: $color-quinary;
+    font-weight: bold;
+    
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($color-quinary, .5);
+    }
+  }
+}

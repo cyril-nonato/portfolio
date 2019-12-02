@@ -4,7 +4,7 @@
 }
 
 .section-stack {
-  height: 100vh;
+  height: 130vh;
   width: 100%;
   position: relative;
 
@@ -22,3 +22,9 @@
     z-index: -1;
   }
 };
+
+.section-projects {
+  height: 100vh;
+  width: 100%;
+  margin-top: 5rem;
+}
