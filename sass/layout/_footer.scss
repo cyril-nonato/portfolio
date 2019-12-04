@@ -1,0 +1,65 @@
+.footer {
+  background-color: $color-footer;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: $color-secondary;
+  grid-template-areas:
+    "brand brand"
+    "links details";
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-areas:
+    "brand"
+    "links"
+    "details";
+  }
+
+  &__brand {
+    grid-area: brand;
+    justify-self: center;
+    align-self: center;
+    font-weight: bold;
+  }
+
+  &__logo {
+    font-size: 5rem;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    border-top: 1px solid white;
+    padding-top: 1rem;
+    &:not(:last-child) {
+      padding-right: 5rem;
+    }
+  }
+  &__link {
+    color: $color-secondary;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+
+  &__details {
+    justify-self: center;
+    align-self: center;
+    font-size: 1.6rem;
+    padding-top: 1rem;
+    border-top: 1px solid $color-secondary;
+  }
+}

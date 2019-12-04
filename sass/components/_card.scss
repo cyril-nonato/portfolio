@@ -1,32 +1,72 @@
 .card {
   position: relative;
+  perspective: 150rem;
+  transition: all .5s ease;
+  width: 100%;
+  height: 100%;
 
-  &:hover &__front {
-    animation: twirl .5s ease-in forwards;
-
-  }
-
-  &:hover &__back {
-    animation: twirl .5s .5s ease-out forwards reverse;
-  }
-
-  &__front {
-    background-color: white;
+  &__side {
+    transition: all .5s ease;
+    box-shadow: 0 2px 10px rgba($color-quinary, .4);
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 7px $color-quinary;
+    backface-visibility: hidden;
     border-radius: 5px;
+
+    &--front {
+      background-color: $color-background;
+    }
+
+    &--back {
+      transform: rotateY(-180deg);
+      text-align: center;
+
+      &-1 {
+        background-image: linear-gradient(to right bottom, rgba($color-tertiary, .6), rgba($color-tertiary, .8));
+      }
+
+      &-2 {
+        background-image: linear-gradient(to right bottom, rgba($color-primary, .6), rgba($color-primary, .8));
+      }
+
+      &-3 {
+        background-image: linear-gradient(to right bottom, rgba($color-quarternary, .6), rgba($color-quarternary, .8));
+      }
+    }
+
   }
 
-  &__back {
-    transform: rotateY(90deg);
-    background-color: grey;
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
-    box-shadow: 0 0 7px $color-quinary;
-    border-radius: 5px;
   }
+
+  &__description {
+    font-size: 1.8rem;
+    color: $color-secondary;
+    font-weight: bold;
+    display: block;
+    margin: 2rem;
+
+  }
+
   &__picture {
     height: 250px;
     width: 100%;
@@ -34,28 +74,24 @@
     overflow: hidden;
     margin-bottom: 2rem;
 
-
     &-1 {
       background-position: center;
       background-size: cover;
-      background-image: linear-gradient(
-        to right bottom, rgba($color-tertiary, .4), rgba($color-tertiary, .7)),
+      background-image: linear-gradient(to right bottom, rgba($color-tertiary, .4), rgba($color-tertiary, .7)),
         url(../../assets/readit.jpg);
     }
 
     &-2 {
       background-position: center;
       background-size: cover;
-      background-image: linear-gradient(
-        to right bottom, rgba($color-primary, .4), rgba($color-primary, .7)),
+      background-image: linear-gradient(to right bottom, rgba($color-primary, .4), rgba($color-primary, .7)),
         url(../../assets/season.jpg);
     }
 
     &-3 {
       background-position: center;
       background-size: cover;
-      background-image: linear-gradient(
-        to right bottom, rgba($color-quarternary, .4), rgba($color-quarternary, .7)),
+      background-image: linear-gradient(to right bottom, rgba($color-quarternary, .4), rgba($color-quarternary, .7)),
         url(../../assets/pokemon.jpg);
     }
   }
@@ -105,9 +141,46 @@
     padding: 1.2rem 0;
     color: $color-quinary;
     font-weight: bold;
-    
+
     &:not(:last-child) {
       border-bottom: 1px solid rgba($color-quinary, .5);
+    }
+  }
+
+  @include respond(tablet) {
+    background-color: $color-background;
+    box-shadow: 0 2px 10px rgba($color-quinary, .4);
+
+    &__side {
+      transition: all .5s ease;
+      box-shadow: none;
+      position: relative;
+      backface-visibility: hidden;
+      border-radius: 5px;
+
+      &--front {
+        height: auto;
+        padding: 2rem 0;
+      }
+
+      &--back {
+        transform: rotateY(0deg);
+        height: 200px;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+      }
+
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+
+    &__heading {
+      top: 140px;
+      right: 15px;
+    }
+    &__picture {
+      height: 200px;
     }
   }
 }

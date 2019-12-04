@@ -1,37 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Cyril | Front End Engineer</title>
+  <title>Cyril | Front End Developer</title>
   <link rel='stylesheet' href="css/icon-font.css" />
   <link rel='stylesheet' href='css/style.css' />
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header class="header">
-      <div class="header__video">
-          <video class="header__video-content" poster="assets/background.jpg" autoplay muted loop>
-            <source src="assets/background.mp4" type="video/mp4" />
-          </video>
-          <div class="header__video-cover">&nbsp;</div>
-      </div>
-      <div class="header__logo-box">
-        <span class="header__logo">𝘾</span>
-      </div>
+    <div class="header__video">
+      <video class="header__video-content" poster="assets/background.jpg" autoplay muted loop>
+        <source src="assets/background.mp4" type="video/mp4" />
+      </video>
+      <div class="header__video-cover">&nbsp;</div>
+    </div>
+    <div class="header__logo-box">
+      <span class="header__logo">𝘾</span>
+    </div>
 
-      <div class="header__text-box">
-        <h1 class="heading__primary">
-          <span class="heading__primary-main">
-            Cyril Jessie D. Nonato
-          </span>
-          <span class="heading__primary-sub">
-            Front End Engineer
-          </span>
-        </h1>
-        <a href='/' class="btn btn--white btn--animated">See Projects</a>
-      </div>
+    <div class="header__text-box">
+      <h1 class="heading__primary">
+        <span class="heading__primary-main">
+          Cyril Jessie D. Nonato
+        </span>
+        <span class="heading__primary-sub">
+          Front End Developer
+        </span>
+      </h1>
+      <a href='/' class="btn btn--whiteBg btn--primary btn--animated">See Projects</a>
+    </div>
   </header>
   <main>
     <section class="section-about">
@@ -47,11 +49,12 @@
           <span class="stack-box__text">CSS | SCSS</span>
           <span class="stack-box__text">Javscript</span>
           <span class="stack-box__text">React | Redux</span>
+          <span class="stack-box__text">Jest | React Testing Library</span>
         </div>
         <div class="stack-box">
           <i class="icon-basic-server2 stack-box__icon"></i>
           <h3 class="stack-box__title">Database</h3>
-          <span class="stack-box__text">Firebase</span>
+          <span class="stack-box__text">Firebase | NoSQL</span>
         </div>
         <div class="stack-box">
           <i class="icon-basic-world stack-box__icon"></i>
@@ -62,11 +65,13 @@
         </div>
       </div>
     </section>
-    <section class="section-projects">
+    <section class="section-projects" id="section-projects">
       <h2 class="heading__secondary">Project Portfolio</h2>
       <div class="grid-projects">
+
         <div class="card">
-          <div class="card__front">
+
+          <div class="card__side card__side--front">
             <div class="card__picture card__picture-1"></div>
             <h4 class="card__heading">
               <span class="card__heading-span card__heading-span--1">Readit</span>
@@ -74,42 +79,154 @@
             <ul class="card__list">
               <li class="card__item">React | Redux</li>
               <li class="card__item">Redux-saga</li>
-              <li class="card__item">CSS in JS | Styled-components</li>
+              <li class="card__item">CSS in JS | Styled Components</li>
               <li class="card__item">Firebase | Auth | Firestore</li>
             </ul>
           </div>
 
-          <div class="card__back">
-           
+          <div class="card__side card__side--back card__side--back-1">
+            <div class="card__content">
+              <span class="card__description">
+                A reddit clone app with CRUD and authentication functionality
+              </span>
+              <a href='#popup-readit' class="u-center-text btn btn--whiteBg btn--tertiary">Details</a>
+            </div>
           </div>
+
         </div>
+
         <div class="card">
-          <div class="card__picture card__picture-2"></div>
-          <h4 class="card__heading">
-            <span class="card__heading-span card__heading-span--2">Season</span>
-          </h4>
-          <ul class="card__list">
-            <li class="card__item">React | Redux</li>
-            <li class="card__item">Redux-saga</li>
-            <li class="card__item">CSS in JS | Styled-components</li>
-            <li class="card__item">Stripe api</li>
-            <li class="card__item">Firebase | Auth | Firestore</li>
-          </ul>
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-2"></div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--2">Season</span>
+            </h4>
+            <ul class="card__list">
+              <li class="card__item">React | Redux</li>
+              <li class="card__item">Redux-saga</li>
+              <li class="card__item">CSS in JS | Styled Components</li>
+              <li class="card__item">Stripe Api</li>
+              <li class="card__item">Firebase | Auth | Firestore</li>
+            </ul>
+          </div>
+
+          <div class="card__side card__side--back card__side--back-2">
+            <div class="card__content">
+              <span class="card__description">
+                E-commerce phone app using stripe back-end api integration
+              </span>
+              <a href='#popup-season' class="btn btn--whiteBg btn--primary">Details</a>
+            </div>
+          </div>
+
         </div>
+
         <div class="card">
-          <div class="card__picture card__picture-3"></div>
-          <h4 class="card__heading">
-            <span class="card__heading-span card__heading-span--3">Pokemon App</span>
-          </h4>
-          <ul class="card__list">
-            <li class="card__item">React | Redux</li>
-            <li class="card__item">Redux-thunk</li>
-            <li class="card__item">SCSS | BEM</li>
-            <li class="card__item">PokéAPI</li>
-          </ul>
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-3"></div>
+            <h4 class="card__heading">
+              <span class="card__heading-span card__heading-span--3">Pokemon App</span>
+            </h4>
+            <ul class="card__list">
+              <li class="card__item">React | Redux</li>
+              <li class="card__item">Redux-thunk</li>
+              <li class="card__item">SCSS | BEM</li>
+              <li class="card__item">PokéAPI</li>
+            </ul>
+          </div>
+
+          <div class="card__side card__side--back card__side--back-3">
+            <div class="card__content">
+              <span class="card__description">
+                A pokemon database app using PokéAPI
+              </span>
+              <a href='#popup-pokemon-app' class="btn btn--whiteBg btn--quarternary">Details</a>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </section>
+
+    <!-- Popup -->
+    <div class="popup" id="popup-readit">
+      <div class="popup__content">
+        <a href="#section-projects" class="popup__close">&#10005;</a>
+        <video class="popup__video" poster="assets/readit.jpg" controls muted loop>
+          <source src="assets/readit-sample.mp4" type="video/mp4" />
+        </video>
+        <div class="popup__details">
+          <h3 class="heading__tertiary heading__tertiary--1">Readit</h3>
+          <span class="popup__stack">React, Redux, Firebase</span>
+          <p class="popup__para">Create, delete, read and update post, upvote/downvote and comment on post using
+            firestore real time database</p>
+          <div class="popup__links">
+            <a href='https://redditzilla-8f620.firebaseapp.com/' target="_blank" class="u-center-text btn btn--tertiaryBg btn--secondary">Demo</a>
+            <a href='https://github.com/cyril-nonato/readit' target="_blank" class="u-center-text btn btn--tertiaryBg btn--secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-season">
+      <div class="popup__content">
+        <a href="#section-projects" class="popup__close">&#10005;</a>
+        <video class="popup__video" poster="assets/season.jpg" controls loop muted>
+          <source src="assets/season-sample.mp4" type="video/mp4" />
+        </video>
+        <div class="popup__details">
+          <h3 class="heading__tertiary heading__tertiary--2">Season</h3>
+          <span class="popup__stack">React, Redux, Firebase, Stripe Api</span>
+          <p class="popup__para">E-commerce app that reads data from firestore database and uses stripe-api as online
+            payment</p>
+          <div class="popup__links">
+            <a href='https://season-collection.herokuapp.com/' target="_blank" class="u-center-text btn btn--primaryBg btn--secondary">Demo</a>
+            <a href='https://github.com/cyril-nonato/season' target="_blank" class="u-center-text btn btn--primaryBg btn--secondary">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup-pokemon-app">
+      <div class="popup__content">
+        <a href="#section-projects" class="popup__close">&#10005;</a>
+        <video class="popup__video" poster="assets/pokemon.jpg" controls muted>
+          <source src="assets/pokemon-sample.mp4" type="video/mp4" />
+        </video>
+        <div class="popup__details">
+          <h3 class="heading__tertiary heading__tertiary--3">Pokemon App</h3>
+          <span class="popup__stack">React, Redux, Firebase, PokeApi</span>
+          <p class="popup__para">A pokemon database app that uses PokéAPI endpoints to shows pokemon details</p>
+          <div class="popup__links">
+            <a href='#popup-readit' class="u-center-text btn btn--quarternaryBg btn--secondary">Demo</a>
+            <a href='https://github.com/cyril-nonato/my-pokemon-app' class="u-center-text btn btn--quarternaryBg btn--secondary">Source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <div class="footer__logo">𝘾</div>
+        <div class="footer__text">Front End Developer</div>
+      </div>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="https://github.com/cyril-nonato" target="_blank" class="footer__link">Github</a>
+        </li>
+        <li class="footer__item">
+          <a href="/" class="footer__link">Resume</a>
+        </li>
+        <li class="footer__item">
+          <a href="/" class="footer__link">Github</a>
+        </li>
+      </ul>
+      <div class="footer__details">
+        Made by: <strong>Cyril Jessie D. Nonato</strong>
+      </div>
+    </footer>
   </main>
 </body>
+
 </html>

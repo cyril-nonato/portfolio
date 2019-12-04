@@ -1,0 +1,19 @@
+@mixin respond($mediaQuery) {
+  @if $mediaQuery == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    };  // 600px
+  }
+
+  @if $mediaQuery == tablet {
+    @media only screen and (max-width: 75em) {
+      @content
+    }; // 900px
+  }
+
+  @if $mediaQuery == bigDesktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    }; // 900px
+  }
+}

@@ -1,4 +1,7 @@
 .btn {
+  padding: 12px 35px;
+  font-weight: bold;
+
   &,
   &:link,
   &:visited {
@@ -25,16 +28,80 @@
     }
   }
 
-  &--white {
+
+  &--primaryBg {
+    background-color: $color-primary;
+
+    &::after {
+      background-color: $color-primary;
+    }
+  }
+
+  &--tertiaryBg {
+    background-color: $color-tertiary;
+
+    &::after {
+      background-color: $color-tertiary;
+    }
+  }
+
+  &--quinaryBg {
+    background-color: $color-quinary;
+    padding: 12px 35px;
+    font-weight: bold;
+
+    &::after {
+      background-color: $color-quinary;
+    }
+  }
+
+
+  &--tertiaryBg {
+    background-color: $color-tertiary;
+
+
+    &::after {
+      background-color: $color-tertiary;
+    }
+  }
+
+  &--quarternaryBg {
+    background-color: $color-quarternary;
+    padding: 12px 35px;
+    font-weight: bold;
+
+    &::after {
+      background-color: $color-quarternary;
+    }
+  }
+
+
+  &--whiteBg {
     background-color: $color-secondary;
     padding: 12px 35px;
-    color: $color-primary;
     font-weight: bold;
 
     &::after {
       background-color: $color-secondary;
     }
   }
+
+  &--primary {
+    color: $color-primary;
+  }
+
+  &--secondary {
+    color: $color-secondary;
+  }
+
+  &--quarternary {
+    color: $color-quarternary;
+  }
+
+  &--tertiary {
+    color: $color-tertiary;
+  }
+
 
   &::after {
     content: '';

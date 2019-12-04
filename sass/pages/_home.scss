@@ -1,10 +1,10 @@
 .section-about {
-  height: 90vh;
+  height: 100vh;
   display: block;
 }
 
 .section-stack {
-  height: 130vh;
+  min-height: 120vh;
   width: 100%;
   position: relative;
 
@@ -20,11 +20,15 @@
       url(https://wallpapersite.com/images/pages/pic_h/4146.jpg);
     background-size: cover;
     z-index: -1;
+
+    @include respond(tablet) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
   }
 };
 
 .section-projects {
-  height: 100vh;
+  min-height: 120vh;
   width: 100%;
   margin-top: 5rem;
 }

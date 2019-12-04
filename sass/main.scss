@@ -1,15 +1,17 @@
 @import "abstract/variables";
-@import "abstract/animations";
+@import "abstract/mixins";
 
 @import "base/base";
 @import "base/animations";
 @import "base/typography";
 
 @import "layout/header";
+@import "layout/footer";
 
 @import "components/button";
 @import "components/grid";
 @import "components/stack-box";
 @import "components/card";
+@import "components/popup";
 
 @import "pages/home";

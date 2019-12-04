@@ -8,6 +8,14 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px;  10/ 16 = 62.5
+
+  @include respond(tablet) {
+    font-size: 60%;
+  }
+
+  @include respond(phone) {
+    font-size: 52.5%;
+  }
 }
 
 
@@ -15,4 +23,11 @@ body {
   padding: 3rem;
   box-sizing: border-box;
 
+  @include respond(tablet) {
+    padding: 1.5rem;
+  }
+
+  @include respond(tablet) {
+    font-size: 1rem;
+  }
 }
