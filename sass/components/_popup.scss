@@ -1,5 +1,5 @@
 .popup {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -27,6 +27,13 @@
     display: grid;
     grid-template-columns: 7fr 3fr;
     grid-template-areas: "video details";
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      "video"
+      "details";
+    }
   }
 
   &__close {
@@ -40,6 +47,10 @@
     &:hover {
       font-weight: bold;
     }
+
+    @include respond(tablet) {
+      top: 55%;
+    }
   }
 
   &__video {
@@ -52,6 +63,11 @@
     min-height: 100%;
     min-width: 100%;
 
+    @include respond(tablet) {
+      position: relative;
+      height: 100%;
+      width: 50%;
+    }
   }
 
   &__details {
@@ -63,6 +79,10 @@
     align-items: flex-start;
     justify-content: center;
     height: 100%;
+
+    @include respond(tablet) {
+      padding: 2rem;
+    }
   }
 
   &__links {

@@ -454,7 +454,7 @@ body {
         height: 200px; } }
 
 .popup {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -479,6 +479,10 @@ body {
     display: grid;
     grid-template-columns: 7fr 3fr;
     grid-template-areas: "video details"; }
+    @media only screen and (max-width: 75em) {
+      .popup__content {
+        grid-template-columns: 1fr;
+        grid-template-areas: "video" "details"; } }
   .popup__close {
     position: absolute;
     top: 1rem;
@@ -488,6 +492,9 @@ body {
     color: #9291B6; }
     .popup__close:hover {
       font-weight: bold; }
+    @media only screen and (max-width: 75em) {
+      .popup__close {
+        top: 55%; } }
   .popup__video {
     grid-area: video;
     position: absolute;
@@ -497,6 +504,11 @@ body {
     transform: translate(-50%, -50%);
     min-height: 100%;
     min-width: 100%; }
+    @media only screen and (max-width: 75em) {
+      .popup__video {
+        position: relative;
+        height: 100%;
+        width: 50%; } }
   .popup__details {
     grid-area: details;
     padding: 2rem 2rem 2rem 8rem;
@@ -506,6 +518,9 @@ body {
     align-items: flex-start;
     justify-content: center;
     height: 100%; }
+    @media only screen and (max-width: 75em) {
+      .popup__details {
+        padding: 2rem; } }
   .popup__links {
     width: 100%;
     display: flex;
@@ -520,9 +535,36 @@ body {
     font-size: 1.6rem;
     margin-bottom: 1rem; }
 
+.about {
+  width: 80%;
+  margin: 5rem auto 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  @media only screen and (max-width: 75em) {
+    .about {
+      grid-template-columns: 1fr;
+      margin: 2rem auto; } }
+  .about__image {
+    width: 310px;
+    height: auto;
+    justify-self: center;
+    margin-bottom: 2rem; }
+  .about__content {
+    align-self: center; }
+    .about__content--title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #07b0fc; }
+    .about__content--para {
+      font-size: 1.6rem;
+      display: block;
+      font-weight: bold;
+      color: #9291B6; }
+      .about__content--para:not(:last-child) {
+        margin-bottom: 2rem; }
+
 .section-about {
-  height: 100vh;
-  display: block; }
+  min-height: 70vh; }
 
 .section-stack {
   min-height: 120vh;
