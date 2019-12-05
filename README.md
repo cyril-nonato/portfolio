@@ -1,6 +1,6 @@
-## Portfolio
+# Portfolio
 
-# What I use ?
+## What I use ?
 HTML
 CSS
 Javascript
