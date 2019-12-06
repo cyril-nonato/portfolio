@@ -100,15 +100,23 @@
     align-items: center;
     flex-direction: column;
 
-    @include respond(tablet) {
-      flex-direction: row;
-    }
-
     a {
       &:not(:last-child) {
         margin-bottom: 2rem;
       }
     }
+
+    @include respond(tablet) {
+      flex-direction: row;
+      justify-content: space-evenly;
+
+      a {
+        &:not(:last-child) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
   }
 
   &__stack {
