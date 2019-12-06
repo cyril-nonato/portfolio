@@ -29,6 +29,7 @@
     grid-template-areas: "video details";
 
     @include respond(tablet) {
+      height: 90%;
       grid-template-columns: 1fr;
       grid-template-areas: 
       "video"
