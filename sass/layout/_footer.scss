@@ -22,17 +22,19 @@
     grid-area: brand;
     justify-self: center;
     align-self: center;
-    font-weight: bold;
   }
 
   &__logo {
-    font-size: 5rem;
+    font-size: 7rem;
     text-align: center;
+    display: block;
+    font-family: 'Monoton', cursive;
   }
 
   &__text {
     text-align: center;
     font-size: 2rem;
+    font-weight: bold;
   }
 
   &__list {

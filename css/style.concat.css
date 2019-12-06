@@ -579,7 +579,7 @@ body {
   .header__logo {
     font-size: 7rem;
     color: #ecf0f1;
-    font-weight: bold; }
+    font-family: 'Monoton', cursive; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -588,6 +588,9 @@ body {
     text-align: center;
     display: block;
     width: 100%; }
+    @media only screen and (max-width: 37.5em) {
+      .header__text-box {
+        top: 50%; } }
 
 .footer {
   background-color: rgba(0, 0, 0, 0.8);
@@ -605,14 +608,16 @@ body {
   .footer__brand {
     grid-area: brand;
     justify-self: center;
-    align-self: center;
-    font-weight: bold; }
+    align-self: center; }
   .footer__logo {
-    font-size: 5rem;
-    text-align: center; }
+    font-size: 7rem;
+    text-align: center;
+    display: block;
+    font-family: 'Monoton', cursive; }
   .footer__text {
     text-align: center;
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-weight: bold; }
   .footer__list {
     display: flex;
     justify-content: center;

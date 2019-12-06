@@ -47,7 +47,7 @@
   &__logo {
     font-size: 7rem;
     color: $color-secondary;
-    font-weight: bold;
+    font-family: 'Monoton', cursive;
   }
 
   &__text-box {
@@ -58,5 +58,9 @@
     text-align: center;
     display: block;
     width: 100%;
+
+    @include respond(phone) {
+      top: 50%;
+    }
   }
 }
