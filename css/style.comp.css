@@ -533,6 +533,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; }
+    @media only screen and (max-width: 75em) {
+      .popup__links {
+        flex-direction: row; } }
     .popup__links a:not(:last-child) {
       margin-bottom: 2rem; }
   .popup__stack {
